@@ -1,0 +1,38 @@
+  
+*{  font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body{
+    background: rgba(211, 211, 211,0.8);
+}
+
+div a img {
+    height: auto;
+    width: auto;
+    max-height: 72px;
+    max-width: 250px;
+}
+
+.navbar {
+    padding-top: 0 ;
+    padding-bottom: 0;
+    background: rgba(0, 0, 0, 1.0);
+ }
+
+ h1{
+    text-align: center;
+    background-color: grey;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+ }
+
+ .dropdown{
+    text-align:center ;
+ }
+
+ .dropdown-item{
+    background: grey;
+ }
+

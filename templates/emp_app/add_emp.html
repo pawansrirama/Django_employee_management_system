@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>add employee</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{%static 'css/add_emp.css'%}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="{%static 'images/image1.jpg' %}" alt="images"></a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Select Option
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/all_emp/">ALL EMPLOYEES</a></li>
+            <li><a class="dropdown-item" href="/add_emp/">ADD EMPLOYEES</a></li>
+            <li><a class="dropdown-item" href="/del_emp/">REMOVE EMPLOYEES</a></li>
+            <li><a class="dropdown-item" href="/filter_emp/">FILTER EMPLOYEES</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <script>
+      var domainroot=""
+      function Gsitesearch(curobj)
+      {
+        curobj.q.value=""+domainroot+" "+curobj.qfront.value
+      }
+      </script>
+<form class="d-flex" action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)">
+<input name="q" type="hidden" />
+<input class="form-control me-2" name="qfront" type="search" required class="searchField" placeholder="Google Site Sea
+
+rch" aria-label="Search" maxlength="50"/>
+<button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+
+    </div>
+  </div>
+</nav>
+
+
+
+
+    <div class="container1">
+        <h1>ADD EMPLOYEES</h1>
+    </div>
+	<form action="/add_emp/" method="post">
+		{% csrf_token %} <!--for security purpose-->
+  	<div class="container">
+    <label for="firstname" class="form-label">First_name</label><br>
+    <input type="text" class="form-control" name="first_name" id="firstname" value={{first_name}} >
+
+    <label for="lastname" class="form-label">Last_name</label><br>
+    <input type="text" class="form-control" name="last_name" id="lastname" value={{last_name}}>
+
+    <label for="salary" class="form-label">salary</label><br>
+    <input type="number" class="form-control" name="salary" id="salary" value={{salary}}>
+
+    <label for="dept" class="form-label">Department</label><br>
+    <input type="text" class="form-control" name="dept" id="dept" value={{dept}}>
+
+    <label for="role" class="form-label">Role</label><br>
+    <input type="number" class="form-control" name="role" id="role" value={{role}} >
+
+    <label for="bonus" class="form-label">bonus</label><br>
+    <input type="number" class="form-control" name="bonus" id="bonus" value={{bonus}}>
+
+	<label for="phno" class="form-label">Phone number</label><br>
+    <input type="number" class="form-control" name="phno" id="phno" value={{bonus}}>    
+    <hr> 
+  	<button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+	</form>
+
+  <hr>
+    <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+      <p>© 2023 Copyright 
+        <a href="https://gmail.com/">Email: pawansrirama@gmail.com</p></a>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

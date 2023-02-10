@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OFFICE EMPLOYEE MANAGEMENT</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	
+  <link rel="stylesheet" type="text/css" href="{%static 'css/index.css'%}">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="{%static 'images/image1.jpg' %}" alt="images"></a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Select Option
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="all_emp/">ALL EMPLOYEES</a></li>
+            <li><a class="dropdown-item" href="add_emp/">ADD EMPLOYEES</a></li>
+            <li><a class="dropdown-item" href="del_emp/">REMOVE EMPLOYEES</a></li>
+            <li><a class="dropdown-item" href="filter_emp/">FILTER EMPLOYEES</a></li>
+          </ul>
+        </li>
+      
+      </ul>
+      
+      <script>
+      var domainroot=""
+      function Gsitesearch(curobj)
+      {
+        curobj.q.value=""+domainroot+" "+curobj.qfront.value
+      }
+      </script>
+<form class="d-flex" action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)">
+<input name="q" type="hidden" />
+<input class="form-control me-2" name="qfront" type="search" required class="searchField" placeholder="Google Site Sea
+
+rch" aria-label="Search" maxlength="50"/>
+<button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+
+
+    </div>
+  </div>
+</nav>
+
+	
+
+	<div class="jumbotron">
+		<h1>OFFICE EMPLOYEE MANAGEMENT SYSTEMS</h1><hr>
+
+	</div>
+
+<div class="container">
+	<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      	<div class="card" style="width: 13rem;" >
+  		<img src="{% static 'images/image2.jpg'%}" class="card-img-top" alt="image2">
+  		<div class="card-body">
+    	<h5 class="card-title"><em><big>Total Employees</big></em></h5>
+    	<p class="card-text"><em>Detials of all employee in company</em></p>
+    	<a href="/all_emp" class="btn btn-primary">Click Here</a>
+  		</div>
+		</div>
+    </div>
+    <div class="col">
+        <div class="card" style="width: 13rem;" >
+  		<img src="{% static 'images/image3.png'%}" class="card-img-top" alt="image3">
+  		<div class="card-body">
+    	<h5 class="card-title"><em><big>Add Employees</big></em></h5>
+    	<p class="card-text"><em>add employee to company</em></p>
+    	<a href="/add_emp" class="btn btn-primary">Click Here</a>
+  		</div>
+		</div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 13rem; height: 18.8rem;" >
+  		<img src="{% static 'images/image4.jpg'%}" class="card-img-top" alt="image4">
+  		<div class="card-body">
+    	<h5 class="card-title"><em><big>Del Employee</big></em></h5>
+    	<p class="card-text"><em>Remove employee from the company</em></p>
+    	<a href="/del_emp" class="btn btn-primary">Click Here</a>
+  		</div>
+		</div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 13rem;" >
+  		<img src="{% static 'images/image5.jpg'%}" class="card-img-top" alt="image5">
+  		<div class="card-body">
+    	<h5 class="card-title">Filter Employees</h5>
+    	<p class="card-text"><em>Group the Employee based on specific fields</em></p>
+    	<a href="/filter_emp" class="btn btn-primary">Click Here</a>
+  		</div>
+		</div>
+    </div>
+  	</div>
+	</div>
+</div>
+	
+
+<hr>
+    <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+      <p>© 2023 Copyright 
+        <a href="https://gmail.com/">Email: pawansrirama@gmail.com</p></a>
+    </div>
+  
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
