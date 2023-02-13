@@ -40,8 +40,7 @@ def del_emp(request,emp_id=0):
 		try:
 			emp_removed=employee.objects.get(id=emp_id)
 			emp_removed.delete()
-
-			return render(request,'emp_app/index.html')
+			return render(request,'emp_app/del_emp_after.html')
 		except:
 			return HttpResponse('please enter vaild inputs')
 
@@ -50,6 +49,7 @@ def del_emp(request,emp_id=0):
 		'emps':emps
 	}
 	return render(request, 'emp_app/del_emp.html',context)
+
 
 def filter_emp(request):
 	if request.method == "POST":
